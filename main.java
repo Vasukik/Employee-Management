@@ -1,7 +1,9 @@
 import java.util.Scanner;
 
+// Class Name changed to lowercase to match file name
 public class main { 
     public static void main(String[] args) {
+        // Class name-ஐ lowercase-க்கு மாற்றியுள்ளேன்
         employeeservice service = new employeeservice(); 
         Scanner scanner = new Scanner(System.in);
 
@@ -18,6 +20,9 @@ public class main {
             System.out.println("6. Exit");
             System.out.print("Enter your choice: ");
 
+            // Input Validation-க்காக error handling செய்வது சிறந்தது.
+            // இங்கு எளிமைக்காக நேரடியாக input எடுக்கப்பட்டுள்ளது.
+            
             choice = scanner.nextInt();
 
             switch (choice) {
@@ -31,6 +36,7 @@ public class main {
                     int age = scanner.nextInt();
                     System.out.print("Enter Salary: ");
                     double salary = scanner.nextDouble();
+                    // Class name-ஐ lowercase-க்கு மாற்றியுள்ளேன்
                     service.addEmployee(new employee(id, name, age, salary)); 
                     break;
 
@@ -59,7 +65,7 @@ public class main {
                     break;
 
                 case 6: // Exit
-                    service.saveDataToFile(); 
+                    service.saveDataToFile(); // <- Exit ஆவதற்கு முன் தரவுகளை நிரந்தரமாகச் சேமிக்கிறது
                     System.out.println("Exiting Application. Thank you!");
                     break;
 
